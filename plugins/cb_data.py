@@ -52,7 +52,7 @@ async def doc(bot,update):
      used_ = find_one(update.from_user.id)
      used = used_["used_limit"]
      date = used_["date"]	
-     name = new_name.split(":-")
+     name = new_name.split(":")
      new_filename = name[1]
      file_path = f"downloads/{new_filename}"
      message = update.message.reply_to_message
@@ -98,7 +98,7 @@ async def doc(bot,update):
      else:
      		ph_path = None
      
-     value = 2090000000
+     value = 314572800
      if value < file.file_size:
          await ms.edit("```Sizga yuborish boshlanmoqda...📤```")
          try:
@@ -144,7 +144,7 @@ async def vid(bot,update):
      used_ = find_one(update.from_user.id)
      used = used_["used_limit"]
      date = used_["date"]
-     name = new_name.split(":-")
+     name = new_name.split(":")
      new_filename = name[1]
      file_path = f"downloads/{new_filename}"
      message = update.message.reply_to_message
@@ -200,7 +200,7 @@ async def vid(bot,update):
      		    ph_path = None
      		    print(e)
      
-     value = 2090000000
+     value = 314572800
      if value < file.file_size:
          await ms.edit("```Sizga yuborish boshlanmoqda...📤```")
          try:
@@ -246,7 +246,7 @@ async def aud(bot,update):
      new_name = update.message.text
      used_ = find_one(update.from_user.id)
      used = used_["used_limit"]
-     name = new_name.split(":-")
+     name = new_name.split(":")
      new_filename = name[1]
      file_path = f"downloads/{new_filename}"
      file = update.message.reply_to_message
