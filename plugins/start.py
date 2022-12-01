@@ -109,7 +109,7 @@ async def send_doc(client,message):
        if buy_date==None:
            LIMIT = 350
        else:
-           LIMIT = 50
+           LIMIT = 10
        then = used_date+ LIMIT
        left = round(then - c_time)
        conversion = datetime.timedelta(seconds=left)
@@ -124,7 +124,7 @@ async def send_doc(client,message):
        		file = media.document or media.video or media.audio 
        		dcid = FileId.decode(file.file_id).dc_id
        		filename = file.file_name
-       		value = 2147483648
+       		value = 314572800
        		used_ = find_one(message.from_user.id)
        		used = used_["used_limit"]
        		limit = used_["uploadlimit"]
