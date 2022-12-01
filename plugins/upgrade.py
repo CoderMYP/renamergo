@@ -4,59 +4,53 @@ from pyrogram import Client , filters
 
 @Client.on_callback_query(filters.regex('upgrade'))
 async def upgrade(bot,update):
-	text = """**Free Plan User**
-	Daily  Upload limit 2GB
-	Price 0
-	
-	**VIP 1 ** 
-	Daily  Upload  limit 10GB
-	Price Rs 55  🇮🇳/🌎 0.67$  per Month
-	
-	**VIP 2 **
-	Daily Upload limit 50GB
-	Price Rs 80  🇮🇳/🌎 0.97$  per Month
-	
-	**VIP3**
-	Daily Upload limit 100GB
-	Price Rs 150  🇮🇳/🌎 1.81$  per Month
-	
-	
-	Pay Using Upi I'd ```lokamandc1224@oksbi```
-	
-	After Payment Send Screenshots Of 
-        Payment To Admin"""
+	text = """Bepul Foydalanuvchi ta'rifi
+	 Kunlik fayllarni qayta nomlash limiti: 300MB
+	 Narxi: Bepul
+ 
+	 Lite✨ 
+ 	 Kunlik fayllarni qayta nomlash limiti: 15GB
+ 	 4GBgacha fayllarni qayta nomlash mumkin!
+ 	 Narxi: Haftasiga 0.75💲 yoki Oyiga 3💲
+ 
+	 VIP⚡
+	 Kunlik fayllarni qayta nomlash limiti: 50GB
+	 4GBgacha fayllarni qayta nomlash mumkin!
+ 	 Narxi: Haftasiga 1.5💲 yoki Oyiga 5💲
+ 
+	 To'lov usullari: HUMO💳  | UZCARD💳 |  VISA💳
+ 
+ 	 Ta'rif sotib olmoqchi bo'lsangiz admin bilan bog'laning.
+	 4Gbgacha faylni yuklash uchun Telegram Premium va undan tashqari bot ishlashi uchun server kerak. Bizni to'g'ri tushundingiz degan umiddamiz🙂"""
 	keybord = InlineKeyboardMarkup([[ 
-        			InlineKeyboardButton("ADMIN 🛂",url = "https://t.me/mrlokaman")], 
-        			[InlineKeyboardButton("PayPal 🌎",url = "https://www.paypal.me/lokamanchendekar"),
-        			InlineKeyboardButton("Paytm",url = "https://p.paytm.me/xCTH/los89jy0")],[InlineKeyboardButton("Cancel",callback_data = "cancel")  ]])
+        			InlineKeyboardButton("Administrator",url = "https://t.me/azik_developer")], 
+        			[InlineKeyboardButton("Payme💰",url = "https://payme.uz/632a1e4dcad1c751639f6e8a"),
+        			InlineKeyboardButton("VISA💳",url = "https://t.me/azik_developer")],[InlineKeyboardButton("Bekor qilish",callback_data = "cancel")  ]])
 	await update.message.edit(text = text,reply_markup = keybord)
 	
 
 @Client.on_message(filters.private & filters.command(["upgrade"]))
 async def upgradecm(bot,message):
-	text = """**Free Plan User**
-	Daily  Upload limit 2GB
-	Price 0
-	
-	**VIP 1 ** 
-	Daily  Upload  limit 10GB
-	Price Rs 55  🇮🇳/🌎 0.67$  per Month
-	
-	**VIP 2 **
-	Daily Upload limit 50GB
-	Price Rs 80  🇮🇳/🌎 0.97$  per Month
-	
-	**VIP3**
-	Daily Upload limit 100GB
-	Price Rs 150  🇮🇳/🌎 1.81$  per Month
-	
-	
-	Pay Using Upi I'd ```lokamandc1224@oksbi```
-	
-	After Payment Send Screenshots Of 
-        Payment To Admin"""
+	text = """Bepul Foydalanuvchi ta'rifi
+	 Kunlik fayllarni qayta nomlash limiti: 300MB
+	 Narxi: Bepul
+ 
+	 Lite✨ 
+ 	 Kunlik fayllarni qayta nomlash limiti: 15GB
+ 	 4GBgacha fayllarni qayta nomlash mumkin!
+ 	 Narxi: Haftasiga 0.75💲 yoki Oyiga 3💲
+ 
+	 VIP⚡
+	 Kunlik fayllarni qayta nomlash limiti: 50GB
+	 4GBgacha fayllarni qayta nomlash mumkin!
+ 	 Narxi: Haftasiga 1.5💲 yoki Oyiga 5💲
+ 
+	 To'lov usullari: HUMO💳  | UZCARD💳 |  VISA💳
+ 
+ 	 Ta'rif sotib olmoqchi bo'lsangiz admin bilan bog'laning.
+	 4Gbgacha faylni yuklash uchun Telegram Premium va undan tashqari bot ishlashi uchun server kerak. Bizni to'g'ri tushundingiz degan umiddamiz🙂"""
 	keybord = InlineKeyboardMarkup([[ 
-        			InlineKeyboardButton("ADMIN 🛂",url = "https://t.me/mrlokaman")], 
-        			[InlineKeyboardButton("PayPal 🌎",url = "https://www.paypal.me/lokamanchendekar"),
-        			InlineKeyboardButton("Paytm",url = "https://p.paytm.me/xCTH/los89jy0")],[InlineKeyboardButton("Cancel",callback_data = "cancel")  ]])
+        			InlineKeyboardButton("Administrator",url = "https://t.me/azik_developer")], 
+        			[InlineKeyboardButton("Payme💰",url = "https://payme.uz/632a1e4dcad1c751639f6e8a"),
+        			InlineKeyboardButton("VISA💳",url = "https://t.me/azik_developer")],[InlineKeyboardButton("Bekor qilish",callback_data = "cancel")  ]])
 	await message.reply_text(text = text,reply_markup = keybord)
