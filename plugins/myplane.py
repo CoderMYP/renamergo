@@ -9,7 +9,7 @@ from datetime import date as date_
 from helper.progress import humanbytes
 
 
-@Client.on_message(filters.private & filters.command(["myplan"]))
+@Client.on_message(filters.private & filters.command(["tarif"]))
 async def start(client,message):
 	used_ = find_one(message.from_user.id)	
 	daily = used_["daily"]
@@ -27,13 +27,13 @@ async def start(client,message):
 	user =  _newus["usertype"]
 	ends = _newus["prexdate"]
 	if ends == None:
-	    text = f"User ID:- ```{message.from_user.id}```\nPlan :- {user}\nDaly Upload Limit :- {humanbytes(limit)}\nToday Used :- {humanbytes(used)}\nRemain:- {humanbytes(remain)}"
+	    text = f"Foydalanuvchi ID: ```{message.from_user.id}```\nTarif: {user}\nKunlik yuklash limiti: {humanbytes(limit)}\nBugun foydalanilgan: {humanbytes(used)}\nQolgan hajm: {humanbytes(remain)}"
 	else:
 	    normal_date = datetime.fromtimestamp(ends).strftime('%Y-%m-%d')
-	    text = f"User ID:- ```{message.from_user.id}```\nPlan :- {user}\nDaly Upload Limit :- {humanbytes(limit)}\nToday Used :- {humanbytes(used)}\nRemain:- {humanbytes(remain)}\n\n```Your Plan Ends On :- {normal_date}"
+	    text = f"Foydalanuvchi ID: ```{message.from_user.id}```\nTa'rif : {user}\nKunlik yuklash limiti: {humanbytes(limit)}\nBugun foydalanilgan: {humanbytes(used)}\nQolgan hajm: {humanbytes(remain)}\n\n```Sizning ta'rifingiz tugaydi: {normal_date} da"
 	    
-	if user == "Free":
-	    await message.reply(text,quote = True,reply_markup = InlineKeyboardMarkup([[       			InlineKeyboardButton("Upgrade 💰💳",callback_data = "upgrade"), InlineKeyboardButton("Cancel ✖️ ",callback_data = "cancel") ]]))
+	if user == "Bepul":
+	    await message.reply(text,quote = True,reply_markup = InlineKeyboardMarkup([[       			InlineKeyboardButton("Ta'rif sotib olish 💰💳",callback_data = "upgrade"), InlineKeyboardButton("Bekor qilish ✖️ ",callback_data = "cancel") ]]))
 	else:
 	    await message.reply(text,quote=True)
 	    
