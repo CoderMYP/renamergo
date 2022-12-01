@@ -37,42 +37,51 @@ async def start(client,message):
 	    id = message.text.split(' ')[1]
 	except:
 	    await message.reply_text(text =f"""
-	Hello {wish} {message.from_user.first_name }
-	__I am file renamer bot, Please sent any telegram 
-	**Document Or Video** and enter new filename to rename it__
+	Salom {message.from_user.first_name }
+Men Telegram fayllarni nomini o'zgartirib va videoga pechat qo'yib beradigan botman! 
+Menga Fayl/Video/Audio yuboring va uni qayta nomlang✍️
+	
+300MB dan katta faylni qayta nomlash uchun tarif sotib olishingiz kerak!!!
+@azik_projectss - 𝚃𝚘 𝚝𝚑𝚎 𝚏𝚞𝚝𝚞𝚛𝚎 𝚠𝚒𝚝𝚑 𝚞𝚜🦾
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/lntechnical") ], 
-	[InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]  ]))
+	 [[ InlineKeyboardButton("Proyektlar🦾" ,url="https://t.me/azik_projectss") ], 
+	[InlineKeyboardButton("Kino kanal🎞", url="https://t.me/azik_cinema") ]  ]))
 	    return
 	if id:
 	    if old == True:
 	        try:
 	            await client.send_message(id,"Your Frind Alredy Using Our Bot")
 	            await message.reply_text(text =f"""
-	Hello {wish} {message.from_user.first_name }
-	__I am file renamer bot, Please sent any telegram 
-	**Document Or Video** and enter new filename to rename it__
+	Salom {message.from_user.first_name }
+Men Telegram fayllarni nomini o'zgartirib va videoga pechat qo'yib beradigan botman! 
+Menga Fayl/Video/Audio yuboring va uni qayta nomlang✍️
+	
+300MB dan katta faylni qayta nomlash uchun tarif sotib olishingiz kerak!!!
+@azik_projectss - 𝚃𝚘 𝚝𝚑𝚎 𝚏𝚞𝚝𝚞𝚛𝚎 𝚠𝚒𝚝𝚑 𝚞𝚜🦾
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/lntechnical") ], 
-	[InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]  ]))
+	 [[ InlineKeyboardButton("Proyektlar🦾" ,url="https://t.me/azik_projectss") ], 
+	[InlineKeyboardButton("Kino kanal🎞", url="https://t.me/azik_cinema") ]  ]))
 	        except:
 	             return
 	    else:
-	         await client.send_message(id,"Congrats! You Won 100MB Upload limit")
+	         await client.send_message(id,"Tabrik! Siz 100MB yutib oldingiz.")
 	         _user_= find_one(int(id))
 	         limit = _user_["uploadlimit"]
 	         new_limit = limit + 104857600
 	         uploadlimit(int(id),new_limit)
 	         await message.reply_text(text =f"""
-	Hello {wish} {message.from_user.first_name }
-	__I am file renamer bot, Please sent any telegram 
-	**Document Or Video** and enter new filename to rename it__
+	Salom {message.from_user.first_name }
+Men Telegram fayllarni nomini o'zgartirib va videoga pechat qo'yib beradigan botman! 
+Menga Fayl/Video/Audio yuboring va uni qayta nomlang✍️
+	
+300MB dan katta faylni qayta nomlash uchun tarif sotib olishingiz kerak!!!
+@azik_projectss - 𝚃𝚘 𝚝𝚑𝚎 𝚏𝚞𝚝𝚞𝚛𝚎 𝚠𝚒𝚝𝚑 𝚞𝚜🦾
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/lntechnical") ], 
-	[InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]  ]))
+	 [[ InlineKeyboardButton("Proyektlar🦾" ,url="https://t.me/azik_projectss") ], 
+	[InlineKeyboardButton("Kino kanal🎞", url="https://t.me/azik_cinema") ]  ]))
 	         
 
 
@@ -85,10 +94,10 @@ async def send_doc(client,message):
        	try:
        		await client.get_chat_member(update_channel, user_id)
        	except UserNotParticipant:
-       		await message.reply_text("**__You are not subscribed my channel__** ",
+       		await message.reply_text("Mendan foydalanish uchun @azik_cinema kanaliga obuna boʻling!!!\n\nKanaldan chiqsangiz foydalanishdan banlanasiz!",
        		reply_to_message_id = message.id,
        		reply_markup = InlineKeyboardMarkup(
-       		[ [ InlineKeyboardButton("Support 🇮🇳" ,url=f"https://t.me/{update_channel}") ]   ]))
+       		[ [ InlineKeyboardButton("Kanalga ulanish" ,url=f"https://t.me/{update_channel}") ]   ]))
        		return
        
        bot_data = find_one(int(botid))
@@ -100,7 +109,7 @@ async def send_doc(client,message):
        	buy_date= user_deta["prexdate"]
        	daily = user_deta["daily"]
        except:
-           await message.reply_text("database has been Cleared click on /start")
+           await message.reply_text("Botni ishlatish uchun qayta /start tugmasini bosing.")
            return
            
            
@@ -115,7 +124,7 @@ async def send_doc(client,message):
        conversion = datetime.timedelta(seconds=left)
        ltime = str(conversion)
        if left > 0:       	    
-       	await message.reply_text(f"```Sorry Dude I am not only for YOU \n Flood control is active so please wait for {ltime}```",reply_to_message_id = message.id)
+       	await message.reply_text(f"```Kechirasiz men faqat SIZ uchun emasman.\nFlood nazorati faol shuning uchun kuting {ltime}```\nLimitlarni yo'qotish uchun /tarif sotib oling!",reply_to_message_id = message.id)
        else:
        		# Forward a single message
        		await client.forward_messages(log_channel, message.from_user.id, message.id)
@@ -137,30 +146,30 @@ async def send_doc(client,message):
        			used_limit(message.from_user.id,0)			     		
        		remain = limit- used
        		if remain < int(file.file_size):
-       		    await message.reply_text(f"Sorry! I can't upload files that are larger than {humanbytes(limit)}. File size detected {humanbytes(file.file_size)}\nUsed Daly Limit {humanbytes(used)} If U Want to Rename Large File Upgrade Your Plan ",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Upgrade 💰💳",callback_data = "upgrade") ]]))
+       		    await message.reply_text(f"Kechirasiz! Men {humanbytes(limit)}dan katta fayllarni yubora olmayman. Aniqlangan fayl hajmi {humanbytes(file.file_size)}\nKunlik foydalanilgan limit {humanbytes(used)} Agar ushbu faylni qayta nomlamoqchi bo'lsangiz /tarif sotib oling.",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Sotib olish 💰💳",callback_data = "upgrade") ]]))
        		    return
        		if value < file.file_size:
        		    if STRING:
        		        if buy_date==None:
-       		            await message.reply_text(f" You Can't Upload More Then {humanbytes(limit)} Used Daly Limit {humanbytes(used)} ",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Upgrade 💰💳",callback_data = "upgrade") ]]))
+       		            await message.reply_text(f" Siz {humanbytes(limit)} dan ko'p yuklay olmaysiz.\nKunlik foydalanilgan limit {humanbytes(used)} ",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Sotib olish 💰💳",callback_data = "upgrade") ]]))
        		            return
        		        pre_check = check_expi(buy_date)
        		        if pre_check == True:
-       		            await message.reply_text(f"""__What do you want me to do with this file?__\n**File Name** :- {filename}\n**File Size** :- {humanize.naturalsize(file.file_size)}\n**Dc ID** :- {dcid}""",reply_to_message_id = message.id,reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("📝 Rename",callback_data = "rename"),InlineKeyboardButton("✖️ Cancel",callback_data = "cancel")  ]]))
+       		            await message.reply_text(f"""__Ushbu faylni nima qilmoqchisiz?__\n**Fayl Nomi**: {filename}\n**Fayl Hajmi**: {humanize.naturalsize(file.file_size)}\n**DC ID**: {dcid}""",reply_to_message_id = message.id,reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Qayta nomlash 📝",callback_data = "rename"),InlineKeyboardButton("Bekor qilish ✖️",callback_data = "cancel")  ]]))
        		            total_rename(int(botid),prrename)
        		            total_size(int(botid),prsize,file.file_size)
        		        else:
-       		            await message.reply_text(f'Your Plane Expired On {buy_date}',quote=True)
+       		            await message.reply_text(f"Nimadir xato ketdi! Admin bilan bog'laning!!! ",quote=True) #Sizning ta'rifingiz {buy_date}da tugaydi!
        		            return
        		    else:
-       		          	await message.reply_text("Can't upload files bigger than 2GB ")
+       		          	await message.reply_text("2GB dan katta faylni yuklay olmayman ")
        		          	return
        		else:
        		    filesize = humanize.naturalsize(file.file_size)
        		    fileid = file.file_id
        		    total_rename(int(botid),prrename)
        		    total_size(int(botid),prsize,file.file_size)
-       		    await message.reply_text(f"""__What do you want me to do with this file?__\n**File Name** :- {filename}\n**File Size** :- {filesize}\n**Dc ID** :- {dcid}""",reply_to_message_id = message.id,reply_markup = InlineKeyboardMarkup(
-       		[[ InlineKeyboardButton("📝 Rename",callback_data = "rename"),
-       		InlineKeyboardButton("✖️ Cancel",callback_data = "cancel")  ]]))
+       		    await message.reply_text(f"""__Ushbu faylni nima qilmoqchisiz?__\n**Fayl Nomi**: {filename}\n**Fayl Hajmi**: {filesize}\n**DC ID**: {dcid}""",reply_to_message_id = message.id,reply_markup = InlineKeyboardMarkup(
+       		[[ InlineKeyboardButton("Qayta nomlash 📝",callback_data = "rename"),
+       		InlineKeyboardButton("Bekor qilish ✖️",callback_data = "cancel")  ]]))
        		
