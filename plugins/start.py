@@ -146,7 +146,7 @@ async def send_doc(client,message):
        			used_limit(message.from_user.id,0)			     		
        		remain = limit- used
        		if remain < int(file.file_size):
-       		    await message.reply_text(f"Kechirasiz! Men {humanbytes(limit)}dan katta fayllarni yubora olmayman. Aniqlangan fayl hajmi {humanbytes(file.file_size)}\nKunlik foydalanilgan limit {humanbytes(used)} Agar ushbu faylni qayta nomlamoqchi bo'lsangiz /tarif sotib oling.",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Sotib olish 💰💳",callback_data = "upgrade") ]]))
+       		    await message.reply_text(f"Kechirasiz! Men {humanbytes(limit)}dan katta fayllarni sizga yubora olmayman.\nAniqlangan fayl hajmi {humanbytes(file.file_size)}\nKunlik foydalanilgan limit {humanbytes(used)}\nAgar ushbu faylni qayta nomlamoqchi bo'lsangiz /tarif sotib oling.",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Sotib olish 💰💳",callback_data = "upgrade") ]]))
        		    return
        		if value < file.file_size:
        		    if STRING:
