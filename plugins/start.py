@@ -43,8 +43,8 @@ Menga Fayl/Video/Audio yuboring va uni qayta nomlang✍️
 	
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("🎬 Kinolar Olami 🎬" ,url="https://t.me/+LT-fjFd5tmFlNzY6") ], 
-	[InlineKeyboardButton("🎥 Jahon premyeralari 🎥", url="https://t.me/+T1rW2007eQc2NWRi") ]  ]))
+	 [[ InlineKeyboardButton("Press Chiqarish 💪" ,url="https://t.me/+TaweX_GKt4VmZjky") ], 
+	[InlineKeyboardButton("Muzikalar 🎶", url="https://t.me/+Ona2jSz88bs0MmUy") ]  ]))
 	    return
 	if id:
 	    if old == True:
@@ -59,8 +59,8 @@ Menga Fayl/Video/Audio yuboring va uni qayta nomlang✍️
 @azik_projectss - 𝚃𝚘 𝚝𝚑𝚎 𝚏𝚞𝚝𝚞𝚛𝚎 𝚠𝚒𝚝𝚑 𝚞𝚜🦾
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("🎬 Kinolar Olami 🎬" ,url="https://t.me/+LT-fjFd5tmFlNzY6") ], 
-	[InlineKeyboardButton("🎥 Jahon premyeralari 🎥", url="https://t.me/+T1rW2007eQc2NWRi") ]  ]))
+	 [[ InlineKeyboardButton("Press Chiqarish 💪" ,url="https://t.me/+TaweX_GKt4VmZjky") ], 
+	[InlineKeyboardButton("Muzikalar 🎶", url="https://t.me/+Ona2jSz88bs0MmUy") ]  ]))
 	        except:
 	             return
 	    else:
