@@ -33,7 +33,7 @@ async def start(client,message):
 	    text = f"Foydalanuvchi ID: ```{message.from_user.id}```\nTa'rif : {user}\nKunlik yuklash limiti: {humanbytes(limit)}\nBugun foydalanilgan: {humanbytes(used)}\nQolgan hajm: {humanbytes(remain)}\n\n```Sizning ta'rifingiz tugaydi: {normal_date} da"
 	    
 	if user == "Bepul":
-	    await message.reply(text,quote = True,reply_markup = InlineKeyboardMarkup([[       			InlineKeyboardButton("Ta'rif sotib olish 💰💳",callback_data = "upgrade"), InlineKeyboardButton("Bekor qilish ✖️ ",callback_data = "cancel") ]]))
+	    await message.reply(text,quote = True,reply_markup = InlineKeyboardMarkup([[       			InlineKeyboardButton("Bekor qilish ✖️ ",callback_data = "cancel") ]]))
 	else:
 	    await message.reply(text,quote=True)
 	    
