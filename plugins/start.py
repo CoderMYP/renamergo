@@ -43,8 +43,8 @@ Menga Fayl/Video/Audio yuboring va uni qayta nomlang✍️
 	
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Proyektlar🦾" ,url="https://t.me/azik_projectss") ], 
-	[InlineKeyboardButton("Kino kanal🎞", url="https://t.me/azik_cinema") ]  ]))
+	 [[ InlineKeyboardButton("🎬 Kinolar Olami 🎬" ,url="https://t.me/+LT-fjFd5tmFlNzY6") ], 
+	[InlineKeyboardButton("🎥 Jahon premyeralari 🎥", url="https://t.me/+T1rW2007eQc2NWRi") ]  ]))
 	    return
 	if id:
 	    if old == True:
@@ -59,8 +59,8 @@ Menga Fayl/Video/Audio yuboring va uni qayta nomlang✍️
 @azik_projectss - 𝚃𝚘 𝚝𝚑𝚎 𝚏𝚞𝚝𝚞𝚛𝚎 𝚠𝚒𝚝𝚑 𝚞𝚜🦾
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Proyektlar🦾" ,url="https://t.me/azik_projectss") ], 
-	[InlineKeyboardButton("Kino kanal🎞", url="https://t.me/azik_cinema") ]  ]))
+	 [[ InlineKeyboardButton("🎬 Kinolar Olami 🎬" ,url="https://t.me/+LT-fjFd5tmFlNzY6") ], 
+	[InlineKeyboardButton("🎥 Jahon premyeralari 🎥", url="https://t.me/+T1rW2007eQc2NWRi") ]  ]))
 	        except:
 	             return
 	    else:
@@ -129,7 +129,7 @@ async def send_doc(client,message):
        		file = media.document or media.video or media.audio 
        		dcid = FileId.decode(file.file_id).dc_id
        		filename = file.file_name
-       		value = 314572800
+       		value = 2222572800
        		used_ = find_one(message.from_user.id)
        		used = used_["used_limit"]
        		limit = used_["uploadlimit"]
