@@ -86,7 +86,7 @@ async def doc(bot,update):
         new_tex = escape_invalid_curly_brackets(c_caption,doc_list)
         caption = new_tex.format(filename=new_filename,filesize=humanbytes(file.file_size))
      else:
-        caption = f"Yangi fayl nomi: **{new_filename}**\n\nvia @azik_renamerbot"
+        caption = f"Yangi fayl nomi: **{new_filename}**\n\nvia @Renamere_Bot"
      if thumb:
      		ph_path = await bot.download_media(thumb)
      		Image.open(ph_path).convert("RGB").save(ph_path)
@@ -183,7 +183,7 @@ async def vid(bot,update):
         new_tex = escape_invalid_curly_brackets(c_caption,vid_list)
         caption = new_tex.format(filename=new_filename,filesize=humanbytes(file.file_size),duration=timedelta(seconds=duration))
      else:
-        caption = f"Yangi fayl nomi: **{new_filename}**\n\nvia @azik_renamerbot"
+        caption = f"Yangi fayl nomi: **{new_filename}**\n\nvia @Renamere_Bot"
      if thumb:
      		ph_path = await bot.download_media(thumb)
      		Image.open(ph_path).convert("RGB").save(ph_path)
@@ -278,7 +278,7 @@ async def aud(bot,update):
         new_tex = escape_invalid_curly_brackets(c_caption,aud_list)
         caption = new_tex.format(filename=new_filename,filesize=humanbytes(file.file_size),duration=timedelta(seconds=duration))
      else:
-        caption = f"Yangi fayl nomi: **{new_filename}**\n\nvia @azik_renamerbot"
+        caption = f"Yangi fayl nomi: **{new_filename}**\n\nvia @Renamere_Bot"
         
      if thumb:
      		ph_path = await bot.download_media(thumb)
