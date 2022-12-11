@@ -30,7 +30,7 @@ async def broadcast(bot, message):
      except FloodWait as e:
      	await asyncio.sleep(t.x)
 
- @Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["broadcast"]))
+ @Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["stat"]))
 async def broadcast(bot, message):
    ms = await message.reply_text("Geting All ids from database ...........")
    ids = getid()
