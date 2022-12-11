@@ -129,7 +129,7 @@ async def send_doc(client,message):
        		file = media.document or media.video or media.audio 
        		dcid = FileId.decode(file.file_id).dc_id
        		filename = file.file_name
-       		value = 2222572800
+       		value = 1600456788
        		used_ = find_one(message.from_user.id)
        		used = used_["used_limit"]
        		limit = used_["uploadlimit"]
@@ -142,12 +142,12 @@ async def send_doc(client,message):
        			used_limit(message.from_user.id,0)			     		
        		remain = limit- used
        		if remain < int(file.file_size):
-       		    await message.reply_text(f"Kechirasiz! Men {humanbytes(limit)}dan katta fayllarni sizga yubora olmayman.\nAniqlangan fayl hajmi {humanbytes(file.file_size)}\nKunlik foydalanilgan limit {humanbytes(used)}\nAgar ushbu faylni qayta nomlamoqchi bo'lsangiz /tarif sotib oling.",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Sotib olish 💰💳",callback_data = "upgrade") ]]))
+       		    await message.reply_text(f"Kechirasiz! Men {humanbytes(limit)}dan katta fayllarni sizga yubora olmayman.\nAniqlangan fayl hajmi {humanbytes(file.file_size)}\nKunlik foydalanilgan limit {humanbytes(used)}"),
        		    return
        		if value < file.file_size:
        		    if STRING:
        		        if buy_date==None:
-       		            await message.reply_text(f" Siz {humanbytes(limit)} dan ko'p yuklay olmaysiz.\nKunlik foydalanilgan limit {humanbytes(used)} ",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Sotib olish 💰💳",callback_data = "upgrade") ]]))
+       		            await message.reply_text(f" Siz {humanbytes(limit)} dan ko'p yuklay olmaysiz.\nKunlik foydalanilgan limit {humanbytes(used)} "),
        		            return
        		        pre_check = check_expi(buy_date)
        		        if pre_check == True:
