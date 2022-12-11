@@ -29,3 +29,12 @@ async def broadcast(bot, message):
      	await ms.edit( f"Message sent to {success} chat(s). {failed} chat(s) failed on receiving message. \nTotal - {tot}" )
      except FloodWait as e:
      	await asyncio.sleep(t.x)
+
+ @Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["broadcast"]))
+async def broadcast(bot, message):
+   ms = await message.reply_text("Geting All ids from database ...........")
+   ids = getid()
+   tot = len(ids)
+   success = 0 
+   failed = 0 
+   await ms.edit(f"Bot azolari: {tot} ta")
