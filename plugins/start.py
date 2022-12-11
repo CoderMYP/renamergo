@@ -109,7 +109,7 @@ async def send_doc(client,message):
        c_time = time.time()
        
        if buy_date==None:
-           LIMIT = 100
+           LIMIT = 300
        else:
            LIMIT = 10
        then = used_date+ LIMIT
