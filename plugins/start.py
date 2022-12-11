@@ -54,9 +54,6 @@ Menga Fayl/Video/Audio yuboring va uni qayta nomlang✍️
 	Salom {message.from_user.first_name }
 Men Telegram fayllarni nomini o'zgartirib va videoga pechat qo'yib beradigan botman! 
 Menga Fayl/Video/Audio yuboring va uni qayta nomlang✍️
-	
-300MB dan katta faylni qayta nomlash uchun tarif sotib olishingiz kerak!!!
-@azik_projectss - 𝚃𝚘 𝚝𝚑𝚎 𝚏𝚞𝚝𝚞𝚛𝚎 𝚠𝚒𝚝𝚑 𝚞𝚜🦾
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
 	 [[ InlineKeyboardButton("Press Chiqarish 💪" ,url="https://t.me/+TaweX_GKt4VmZjky") ], 
@@ -76,8 +73,8 @@ Menga Fayl/Video/Audio yuboring va uni qayta nomlang✍️
 	
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Proyektlar🦾" ,url="https://t.me/azik_projectss") ], 
-	[InlineKeyboardButton("Kino kanal🎞", url="https://t.me/azik_cinema") ]  ]))
+	 [[ InlineKeyboardButton("Press Chiqarish 💪" ,url="https://t.me/+TaweX_GKt4VmZjky") ], 
+	[InlineKeyboardButton("Muzikalar 🎶", url="https://t.me/+Ona2jSz88bs0MmUy") ]  ]))
 	         
 
 
@@ -120,7 +117,7 @@ async def send_doc(client,message):
        conversion = datetime.timedelta(seconds=left)
        ltime = str(conversion)
        if left > 0:       	    
-       	await message.reply_text(f"```Kechirasiz men faqat SIZ uchun emasman.\nFlood nazorati faol shuning uchun kuting {ltime}```\nLimitlarni yo'qotish uchun /tarif sotib oling!",reply_to_message_id = message.id)
+       	await message.reply_text(f"```Kechirasiz men faqat SIZ uchun emasman.\nFlood nazorati faol shuning uchun kuting {ltime}```",reply_to_message_id = message.id)
        else:
        		# Forward a single message
        		await client.forward_messages(log_channel, message.from_user.id, message.id)
