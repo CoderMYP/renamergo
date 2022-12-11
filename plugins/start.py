@@ -41,8 +41,6 @@ async def start(client,message):
 Men Telegram fayllarni nomini o'zgartirib va videoga pechat qo'yib beradigan botman! 
 Menga Fayl/Video/Audio yuboring va uni qayta nomlang✍️
 	
-300MB dan katta faylni qayta nomlash uchun tarif sotib olishingiz kerak!!!
-@azik_projectss - 𝚃𝚘 𝚝𝚑𝚎 𝚏𝚞𝚝𝚞𝚛𝚎 𝚠𝚒𝚝𝚑 𝚞𝚜🦾
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
 	 [[ InlineKeyboardButton("Proyektlar🦾" ,url="https://t.me/azik_projectss") ], 
@@ -76,8 +74,6 @@ Menga Fayl/Video/Audio yuboring va uni qayta nomlang✍️
 Men Telegram fayllarni nomini o'zgartirib va videoga pechat qo'yib beradigan botman! 
 Menga Fayl/Video/Audio yuboring va uni qayta nomlang✍️
 	
-300MB dan katta faylni qayta nomlash uchun tarif sotib olishingiz kerak!!!
-@azik_projectss - 𝚃𝚘 𝚝𝚑𝚎 𝚏𝚞𝚝𝚞𝚛𝚎 𝚠𝚒𝚝𝚑 𝚞𝚜🦾
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
 	 [[ InlineKeyboardButton("Proyektlar🦾" ,url="https://t.me/azik_projectss") ], 
@@ -94,10 +90,10 @@ async def send_doc(client,message):
        	try:
        		await client.get_chat_member(update_channel, user_id)
        	except UserNotParticipant:
-       		await message.reply_text("Mendan foydalanish uchun @azik_cinema kanaliga obuna boʻling!!!\n\nKanaldan chiqsangiz foydalanishdan banlanasiz!",
+       		await message.reply_text("Mendan foydalanish uchun @Renamere_bot_adminlar_uchun guruhiga obuna boʻling!!!\n\nGuruhdan chiqsangiz foydalanishdan banlanasiz!",
        		reply_to_message_id = message.id,
        		reply_markup = InlineKeyboardMarkup(
-       		[ [ InlineKeyboardButton("Kanalga ulanish" ,url=f"https://t.me/{update_channel}") ]   ]))
+       		[ [ InlineKeyboardButton("Guruhga ulanish" ,url=f"https://t.me/{update_channel}") ]   ]))
        		return
        
        bot_data = find_one(int(botid))
@@ -116,7 +112,7 @@ async def send_doc(client,message):
        c_time = time.time()
        
        if buy_date==None:
-           LIMIT = 350
+           LIMIT = 100
        else:
            LIMIT = 10
        then = used_date+ LIMIT
