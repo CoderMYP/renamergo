@@ -98,7 +98,7 @@ async def doc(bot,update):
      else:
      		ph_path = None
      
-     value = 2200572800
+     value = 5300572800
      if value < file.file_size:
          await ms.edit("```Sizga yuborish boshlanmoqda...📤```")
          try:
@@ -200,7 +200,7 @@ async def vid(bot,update):
      		    ph_path = None
      		    print(e)
      
-     value = 2200572800
+     value = 5300572800
      if value < file.file_size:
          await ms.edit("```Sizga yuborish boshlanmoqda...📤```")
          try:
