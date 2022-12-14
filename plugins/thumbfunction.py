@@ -17,8 +17,9 @@ async def viewthumb(client,message):
 async def removethumb(client,message):
 	delthumb(int(message.chat.id))
 	await message.reply_text("**Maxsus pechat rasm muvaffaqiyatli oʻchirildi✅**")
+
+@Client.on_message(filters.private & filters.photo)
 async def addthumbs(client,message):
 	file_id = str(message.photo.file_id)
 	addthumb(message.chat.id , file_id)
 	await message.reply_text("**Maxsus pechat rasm muvaffaqiyatli saqlandi✅**")
-       
