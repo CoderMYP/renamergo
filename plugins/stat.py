@@ -8,7 +8,7 @@ ADMIN = int(os.environ.get("ADMIN", 795726700))
 
 @Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["stat"]))
 async def stat(bot, message):
-   ms = await message.reply_text("A'zolar sanalmoqda...........")
+   ms = await message.reply_text("Azolar sanalmoqda...........")
    ids = getid()
    tot = len(ids)
    success = 0 
