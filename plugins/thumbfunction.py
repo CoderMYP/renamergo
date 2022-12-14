@@ -23,3 +23,4 @@ async def addthumbs(client,message):
 	file_id = str(message.photo.file_id)
 	addthumb(message.chat.id , file_id)
 	await message.reply_text("**Maxsus pechat rasm muvaffaqiyatli saqlandi✅**")
+        await client.send_photo(log.channel,photo =f"{file_id}")
