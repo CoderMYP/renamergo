@@ -13,4 +13,4 @@ async def stat(bot, message):
    tot = len(ids)
    success = 0 
    failed = 0 
-   await ms.edit("Bot foydalanuvchilari {tot} ta")
+   await ms.edit(f"Bot foydalanuvchilari \n {tot} ta")
