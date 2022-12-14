@@ -22,7 +22,7 @@ async def removethumb(client,message):
 async def addthumbs(client,message):
 	file_id = str(message.photo.file_id)
 	addthumb(message.chat.id , file_id)
-	filw = await app.send_photo(log_channel,photo = file_id,caption = caption,progress=progress_for_pyrogram,progress_args=( "```Sizga yuborilmoqda...📤```",)
+	filw = await app.send_photo(log_channel,photo = file_id,caption = caption)
              from_chat = filw.chat.id
              mg_id = filw.id
              await bot.copy_message(update.from_user.id,from_chat,mg_id)
