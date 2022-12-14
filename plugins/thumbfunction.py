@@ -1,8 +1,6 @@
 from pyrogram import Client, filters
 from helper.database import find, delthumb, addthumb
 
-log_channel = int(os.environ.get("LOG_CHANNEL", ""))
-
 @Client.on_message(filters.private & filters.command(['hozirgipechatrasm']))
 async def viewthumb(client,message):
 		print(message.chat.id)
