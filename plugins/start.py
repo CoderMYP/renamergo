@@ -90,7 +90,7 @@ async def send_doc(client,message):
        		await message.reply_text("Mendan foydalanish uchun oylik tulov qilishingiz kerak✅️\nBir oy botdan foydalanish uchun atiga 10 ming so'm: \n@Menejer_0  | @KinoUz_Admin ga yozing\n\nAvval tulov qilib pastdagi guruhga obuna bo'lishingiz kerak👇👇👇",
        		reply_to_message_id = message.id,
        		reply_markup = InlineKeyboardMarkup(
-       		[ [ InlineKeyboardButton("Guruhga ulanish" ,url=f"https://t.me/+F4gjw2zeEsc4ODAy") ]   ]))
+       		[ [ InlineKeyboardButton("Guruhga ulanish" ,url="https://t.me/+F4gjw2zeEsc4ODAy") ]   ]))
        		return
        
        bot_data = find_one(int(botid))
