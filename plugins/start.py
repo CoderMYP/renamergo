@@ -87,12 +87,7 @@ async def send_doc(client,message):
        	try:
        		await client.get_chat_member(update_channel, user_id)
        	except UserNotParticipant:
-       		await message.reply_text("Mendan foydalanish uchun oylik tulov qilishingiz kerak✅️
-
-Bir oy botdan foydalanish uchun atiga 10 ming so'm: 
-@Menejer_0  | @KinoUz_Admin ga yozing
-
-Avval tulov qilib pastdagi guruhga obuna bo'lishingiz kerak👇👇👇",
+       		await message.reply_text("Mendan foydalanish uchun oylik tulov qilishingiz kerak✅️\nBir oy botdan foydalanish uchun atiga 10 ming so'm: \n@Menejer_0  | @KinoUz_Admin ga yozing\n\nAvval tulov qilib pastdagi guruhga obuna bo'lishingiz kerak👇👇👇",
        		reply_to_message_id = message.id,
        		reply_markup = InlineKeyboardMarkup(
        		[ [ InlineKeyboardButton("Guruhga ulanish" ,url=f"https://t.me/+F4gjw2zeEsc4ODAy") ]   ]))
