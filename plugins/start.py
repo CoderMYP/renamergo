@@ -44,7 +44,7 @@ Menga Fayl/Video/Audio yuboring va uni qayta nomlang✍️
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
 	 [[ InlineKeyboardButton("Press Chiqarish 💪" ,url="https://t.me/+TaweX_GKt4VmZjky") ], 
-	[InlineKeyboardButton("Muzikalar 🎶", url="https://t.me/+Ona2jSz88bs0MmUy") ]  ]))
+	[InlineKeyboardButton("TABOBAT COM | RASMIY", url="https://t.me/+D7PqB3EVGDxmYWM6") ]  ]))
 	    return
 	if id:
 	    if old == True:
@@ -57,7 +57,7 @@ Menga Fayl/Video/Audio yuboring va uni qayta nomlang✍️
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
 	 [[ InlineKeyboardButton("Press Chiqarish 💪" ,url="https://t.me/+TaweX_GKt4VmZjky") ], 
-	[InlineKeyboardButton("Muzikalar 🎶", url="https://t.me/+Ona2jSz88bs0MmUy") ]  ]))
+	[InlineKeyboardButton("TABOBAT COM | RASMIY", url="https://t.me/+D7PqB3EVGDxmYWM6") ]  ]))
 	        except:
 	             return
 	    else:
@@ -74,7 +74,7 @@ Menga Fayl/Video/Audio yuboring va uni qayta nomlang✍️
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
 	 [[ InlineKeyboardButton("Press Chiqarish 💪" ,url="https://t.me/+TaweX_GKt4VmZjky") ], 
-	[InlineKeyboardButton("Muzikalar 🎶", url="https://t.me/+Ona2jSz88bs0MmUy") ]  ]))
+	[InlineKeyboardButton("TABOBAT COM | RASMIY", url="https://t.me/+D7PqB3EVGDxmYWM6") ]  ]))
 	         
 
 
