@@ -43,8 +43,8 @@ Menga Fayl/Video/Audio yuboring va uni qayta nomlang✍️
 	
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Press Chiqarish 💪" ,url="https://t.me/+TaweX_GKt4VmZjky") ], 
-	[InlineKeyboardButton("TABOBAT COM | RASMIY", url="https://t.me/+D7PqB3EVGDxmYWM6") ]  ]))
+	 [[ InlineKeyboardButton("🎥 Kinolar Olami HD" ,url="https://t.me/Kinolar_OlamiHD") ], 
+	[InlineKeyboardButton("🎬 Premyera Kinolar", url="https://t.me/+WLX8n5s-WzRCJcok") ]  ]))
 	    return
 	if id:
 	    if old == True:
