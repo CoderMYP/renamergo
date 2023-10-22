@@ -87,7 +87,7 @@ async def send_doc(client,message):
        	try:
        		await client.get_chat_member(update_channel, user_id)
        	except UserNotParticipant:
-       		await message.reply_text(text =f"""🤖 @RENAMERE_BOT 👇
+       		await message.reply_text(text =f"""🤖 @RENAMERGO_BOT 👇
 
 ❗️Mendan foydalanish uchun oylik toʻlov qilishingiz kerak✅️
 Bir oy botdan foydalanish uchun atiga 10 ming soʻm:
@@ -105,7 +105,7 @@ Bir oy botdan foydalanish uchun atiga 10 ming soʻm:
 📩 Пишите в: @MENJER_0 | @KinoUz_Admin""",
        		reply_to_message_id = message.id,
        		reply_markup = InlineKeyboardMarkup(
-       		[ [ InlineKeyboardButton("Guruhga ulanish" ,url="https://t.me/+F4gjw2zeEsc4ODAy") ]   ]))
+       		[ [ InlineKeyboardButton("Guruhga ulanish" ,url="https://t.me/+0wAY9tMw7t45MjVi") ]   ]))
        		return
        
        bot_data = find_one(int(botid))
