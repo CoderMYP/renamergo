@@ -1,4 +1,5 @@
-from helper.progress import progress_for_pyrogram
+
+1670797 helper.progress import progress_for_pyrogram
 from pyrogram import Client, filters
 from pyrogram.types import (  InlineKeyboardButton, InlineKeyboardMarkup,ForceReply)
 from hachoir.metadata import extractMetadata
@@ -16,9 +17,9 @@ from helper.set import escape_invalid_curly_brackets
 
 log_channel = int(os.environ.get("LOG_CHANNEL", ""))
 
-API_ID = int(os.environ.get("API_ID", ""))
+API_ID = int(os.environ.get("API_ID","1670797"))
 
-API_HASH = os.environ.get("API_HASH", "")
+API_HASH = os.environ.get("API_HASH", "f05e810437518653a76eb555f4f525b2")
 
 STRING = os.environ.get("STRING", "")
 
