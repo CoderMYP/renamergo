@@ -37,13 +37,13 @@ async def start(client,message):
 	    id = message.text.split(' ')[1]
 	except:
 	    await message.reply_text(text =f"""
-👋	Salom {message.from_user.first_name }
+👋Salom {message.from_user.first_name}
 📂 Men Telegram fayllarni nomini o'zgartirib va videoga pechat qo'yib beradigan botman! 
 🎬 Menga Fayl/Video/Audio yuboring va uni qayta nomlang✍️
 	
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("🎥 Kinolar Olami HD" ,url="https://t.me/Kinolar_OlamiHD") ], 
+	 [[ InlineKeyboardButton("🎥 Kinolar Olami HD", url="https://t.me/Kinolar_OlamiHD") ], 
 	[InlineKeyboardButton("🎬 Premyera Kinolar", url="https://t.me/+WLX8n5s-WzRCJcok") ]  ]))
 	    return
 	if id:
@@ -51,12 +51,12 @@ async def start(client,message):
 	        try:
 	            await client.send_message(id,"Your Frind Alredy Using Our Bot")
 	            await message.reply_text(text =f"""
-👋 Salom {message.from_user.first_name }
+👋Salom {message.from_user.first_name}
 📂 Men Telegram fayllarni nomini o'zgartirib va videoga pechat qo'yib beradigan botman! 
 🎬 Fayl/Video/Audio yuboring va uni qayta nomlang✍️
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("🎥 Kinolar Olami HD" ,url="https://t.me/Kinolar_OlamiHD") ], 
+	 [[ InlineKeyboardButton("🎥 Kinolar Olami HD", url="https://t.me/Kinolar_OlamiHD") ], 
 	[InlineKeyboardButton("🎬 Premyera Kinolar", url="https://t.me/+WLX8n5s-WzRCJcok") ]  ]))
 	        except:
 	             return
@@ -67,7 +67,7 @@ async def start(client,message):
 	         new_limit = limit + 104857600
 	         uploadlimit(int(id),new_limit)
 	         await message.reply_text(text =f"""
-👋	Salom {message.from_user.first_name }
+👋Salom {message.from_user.first_name}
 📂 Men Telegram fayllarni nomini o'zgartirib va videoga pechat qo'yib beradigan botman! 
 🎬 Menga Fayl/Video/Audio yuboring va uni qayta nomlang✍️
 	
@@ -105,7 +105,7 @@ Bir oy botdan foydalanish uchun atiga 10 ming soʻm:
 📩 Пишите в: @Coder_MYP""",
        		reply_to_message_id = message.id,
        		reply_markup = InlineKeyboardMarkup(
-       		[ [ InlineKeyboardButton("Guruhga ulanish" ,url="https://t.me/+0wAY9tMw7t45MjVi") ]   ]))
+       		[ [ InlineKeyboardButton("Guruhga ulanish", url="https://t.me/+0wAY9tMw7t45MjVi") ]   ]))
        		return
        
        bot_data = find_one(int(botid))
@@ -152,7 +152,7 @@ Bir oy botdan foydalanish uchun atiga 10 ming soʻm:
        			epcho = int(time.mktime(time.strptime(str(today), pattern)))
        			daily_(message.from_user.id,epcho)
        			used_limit(message.from_user.id,0)			     		
-       		remain = 2200000000
+       		remain = 5200000000
        		if remain < int(file.file_size):
        		    await message.reply_text(f"Kechirasiz! Men {humanbytes(limit)}dan katta fayllarni sizga yubora olmayman.\nAniqlangan fayl hajmi {humanbytes(file.file_size)}\nKunlik foydalanilgan limit {humanbytes(used)}",)
        		    return
