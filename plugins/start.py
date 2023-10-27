@@ -152,7 +152,7 @@ Bir oy botdan foydalanish uchun atiga 10 ming soʻm:
        			epcho = int(time.mktime(time.strptime(str(today), pattern)))
        			daily_(message.from_user.id,epcho)
        			used_limit(message.from_user.id,0)			     		
-       		remain = 5200000000
+       		remain = 2200000000
        		if remain < int(file.file_size):
        		    await message.reply_text(f"Kechirasiz! Men {humanbytes(limit)}dan katta fayllarni sizga yubora olmayman.\nAniqlangan fayl hajmi {humanbytes(file.file_size)}\nKunlik foydalanilgan limit {humanbytes(used)}",)
        		    return
